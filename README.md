@@ -26,6 +26,11 @@ install load balancer ,ingress controller and cert manager
 ./kube-infra/ubuntu/install-network.sh
 ```
 
+expose the load balancer to **public ip**
+```bash
+./kube-infra/ubuntu/expose-public.sh XX.XX.XX.XX
+```
+
 ## Troubleshooting 
 if the node registered wrongly
 ```bash
