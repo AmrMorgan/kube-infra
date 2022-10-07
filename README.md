@@ -1,6 +1,11 @@
 # Simple 2 node Kubernetes cluster
 
 ## initial step
+
+to reduce steps you can define variable with public IP
+```bash
+export K_WORKER_IP=XX.XX.XX.XX
+```
 run the below command on all nodes
 ```bash
 git clone https://github.com/AmrMorgan/kube-infra.git && \
@@ -22,11 +27,6 @@ kubectl version --short
 install load balancer ,ingress controller and cert manager
 ```bash
 ./kube-infra/ubuntu/install-network.sh
-```
-
-to reduce steps you can define variable with public IP
-```bash
-export K_WORKER_IP=XX.XX.XX.XX
 ```
 
 expose the load balancer to **public ip**
