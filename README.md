@@ -9,7 +9,7 @@ git clone https://github.com/AmrMorgan/kube-infra.git && \
 ```
 on the master node
 ```bash
-./kube-infra/ubuntu/initialize-cluster.sh && \
+./kube-infra/ubuntu/initialize-cluster.sh
 ```
 
 then run the output of this command on all worker nodes
