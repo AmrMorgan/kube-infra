@@ -27,3 +27,7 @@ systemctl daemon-reload && systemctl restart kubelet
 
 # disable swap
 swapoff -a
+
+# fix network
+unset http_proxy
+unset https_proxy

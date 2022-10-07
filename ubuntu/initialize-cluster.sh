@@ -7,8 +7,6 @@ kubeadm init --pod-network-cidr=10.244.0.0/16 \
   --apiserver-advertise-address=$K_PRIVATE_IP \
   --ignore-preflight-errors=NumCPU,Mem
 
-unset http_proxy && unset https_proxy
-
 # set base 
 mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
