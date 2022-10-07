@@ -19,7 +19,7 @@ kubectl create secret generic -n metallb-system memberlist \
 # install nginx ingress
 helm upgrade --install ingress-nginx ingress-nginx \
   --repo https://kubernetes.github.io/ingress-nginx \
-  --namespace ingress-nginx --create-namespace
+  --namespace ingress-nginx --create-namespace \
   --set ingressClassResource.default=true
 
 # install cert manager
