@@ -25,5 +25,5 @@ helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
   --set hostname=rancher.$K_LOAD_BALANCER.sslip.io \
   --set bootstrapPassword=admin \
-  --set ingress.tls.source=rancher
+  --set ingress.tls.source=rancher \
   -f $K_CONFIGS/rancher-config.yaml
