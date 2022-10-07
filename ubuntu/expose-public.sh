@@ -11,7 +11,7 @@ fi
 
 # define variables
 export K_LOAD_BALANCER="$1"
-export $K_CONFIGS=/etc/kubernetes/custom
+export K_CONFIGS=/etc/kubernetes/custom
 
 # patch nginx controller
 mkdir -p $K_CONFIGS

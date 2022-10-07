@@ -31,6 +31,11 @@ expose the load balancer to **public ip**
 ./kube-infra/ubuntu/expose-public.sh XX.XX.XX.XX
 ```
 
+install rancher on the cluster
+```bash
+./kube-infra/ubuntu/install-rancher.sh XX.XX.XX.XX 
+```
+
 ## Troubleshooting 
 if the node registered wrongly
 ```bash
@@ -43,4 +48,8 @@ kubeadm reset
 see the logs of nginx
 ```bash
 kubectl -n ingress-nginx logs -f ingress-nginx-controller-5cf484d4f7-v6fj8 -n ingress-nginx
+```
+restart the rancher deployment
+```bash
+kubectl -n cattle-system rollout status deploy/rancher
 ```
