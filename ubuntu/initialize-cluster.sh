@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 # initialize the kubernates cluster
 kubeadm init --pod-network-cidr=10.244.0.0/16 \
   --apiserver-advertise-address=$K_PRIVATE_IP \
@@ -19,3 +21,5 @@ curl -fsSL -o get_helm.sh \
 	https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
+
+set +x
