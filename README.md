@@ -2,6 +2,11 @@
 
 ## initial step
 
+first go into root role
+```bash
+sudo -i
+```
+
 to reduce steps you can define variable with public IP
 ```bash
 export K_WORKER_IP=XX.XX.XX.XX
@@ -37,7 +42,7 @@ expose the load balancer to **public ip**
 ## install tools
 install rancher on the cluster
 ```bash
-./kube-infra/ubuntu/install-rancher.sh $K_WORKER_IP
+./kube-infra/ubuntu/install-rancher.sh rancher.domain.com
 ```
 
 ## Troubleshooting 

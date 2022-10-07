@@ -13,7 +13,7 @@ systemctl enable docker
 
 # define variable for private IP to use as node IP
 export K_VERS=1.24.6-00
-export K_PRIVATE_IP=$(ifconfig eth1 | grep 'inet ' | awk '{print $2}')
+export K_PRIVATE_IP=$(ifconfig eth0 | grep 'inet ' | awk '{print $2}')
 
 # install kubernates 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
