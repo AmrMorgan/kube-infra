@@ -40,4 +40,7 @@ kubectl drain worker-01 && kubectl delete node worker-01
 # on worker node
 kubeadm reset
 ```
-
+see the logs of nginx
+```bash
+kubectl -n ingress-nginx logs -f ingress-nginx-controller-5cf484d4f7-v6fj8 -n ingress-nginx
+```
