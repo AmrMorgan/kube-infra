@@ -21,3 +21,18 @@ to verify installastion
 kubectl version --short
 ```
 
+install load balancer ,ingress controller and cert manager
+```bash
+./kube-infra/ubuntu/install-network.sh
+```
+
+## Troubleshooting 
+if the node registered wrongly
+```bash
+# on master node
+kubectl drain worker-01 && kubectl delete node worker-01
+
+# on worker node
+kubeadm reset
+```
+
