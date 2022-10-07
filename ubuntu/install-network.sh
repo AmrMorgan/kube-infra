@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 # install metallb
 kubectl apply -f \
   https://raw.githubusercontent.com/metallb/metallb/v0.13.5/config/manifests/metallb-native.yaml
@@ -28,3 +30,5 @@ helm install \
   --create-namespace \
   --version v1.9.1 \
   --set installCRDs=true
+
+set +x
