@@ -13,7 +13,7 @@ export K_WORKER_IP=XX.XX.XX.XX
 ```
 run the below command on all nodes
 ```bash
-git clone https://github.com/AmrMorgan/kube-infra.git && \
+git clone -b aws https://github.com/AmrMorgan/kube-infra.git && \
     chmod +x kube-infra/ubuntu/* && \
     ./kube-infra/ubuntu/bootstrap-kube.sh
 ```
