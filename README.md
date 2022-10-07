@@ -26,14 +26,19 @@ install load balancer ,ingress controller and cert manager
 ./kube-infra/ubuntu/install-network.sh
 ```
 
+to reduce steps you can define variable with public IP
+```bash
+export K_WORKER_IP=XX.XX.XX.XX
+```
+
 expose the load balancer to **public ip**
 ```bash
-./kube-infra/ubuntu/expose-public.sh XX.XX.XX.XX
+./kube-infra/ubuntu/expose-public.sh $K_WORKER_IP
 ```
 
 install rancher on the cluster
 ```bash
-./kube-infra/ubuntu/install-rancher.sh XX.XX.XX.XX 
+./kube-infra/ubuntu/install-rancher.sh $K_WORKER_IP
 ```
 
 ## Troubleshooting 
