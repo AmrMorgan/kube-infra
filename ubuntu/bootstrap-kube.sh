@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # update ubuntu
 apt update && apt upgrade -y
 
