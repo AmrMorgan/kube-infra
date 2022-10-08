@@ -21,7 +21,7 @@ EOF
 # inatall rancher
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 kubectl create namespace cattle-system
-helm install rancher rancher-latest/rancher \
+helm upgrade --install rancher rancher-latest/rancher \
   --namespace cattle-system \
   --set hostname=$K_RANCHER_DOMAIN \
   --set bootstrapPassword=admin \
