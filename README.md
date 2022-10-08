@@ -10,6 +10,10 @@ sudo -i
 to reduce steps you can define variable with public IP
 ```bash
 export K_WORKER_IP=XX.XX.XX.XX
+
+# set host name on each node
+hostnamectl set-hostname master-node # master node
+hostnamectl set-hostname worker-01   # worker nodes
 ```
 run the below command on all nodes
 ```bash

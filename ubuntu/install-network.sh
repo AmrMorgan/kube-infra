@@ -30,6 +30,7 @@ helm upgrade --install \
   --namespace cert-manager \
   --create-namespace \
   --version v1.9.1 \
-  --set installCRDs=true
+  --set installCRDs=true \
+  --set startupapicheck.timeout=10m
 
 set +x
