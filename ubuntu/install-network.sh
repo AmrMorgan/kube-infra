@@ -23,14 +23,7 @@ helm upgrade --install ingress-nginx ingress-nginx \
   --set controller.watchIngressWithoutClass=true
 
 # install cert manager
-helm repo add jetstack https://charts.jetstack.io
-helm repo update
-helm upgrade --install \
-  cert-manager jetstack/cert-manager \
-  --namespace cert-manager \
-  --create-namespace \
-  --version v1.9.1 \
-  --set installCRDs=true \
-  --set startupapicheck.timeout=10m
+kubectl apply -f \
+  https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.yaml
 
 set +x

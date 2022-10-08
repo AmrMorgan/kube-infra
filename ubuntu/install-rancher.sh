@@ -26,4 +26,5 @@ helm upgrade --install rancher rancher-latest/rancher \
   --set hostname=$K_RANCHER_DOMAIN \
   --set bootstrapPassword=admin \
   --set ingress.tls.source=rancher \
+  --set ingress.ingressClassName=nginx \
   -f $K_CONFIGS/rancher-config.yaml
