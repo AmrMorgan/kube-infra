@@ -42,6 +42,8 @@ expose the load balancer to **public ip**
 ```bash
 ./kube-infra/ubuntu/expose-public.sh $K_WORKER_IP
 ```
+## Adjust domain 
+add domain in route 53 for the rancher and set it it on the worker node and wait for 5 mins
 
 ## install tools
 install rancher on the cluster
