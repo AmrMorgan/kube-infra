@@ -6,18 +6,18 @@ set -x
 kubectl create namespace devops-tools
 
 # create permissions for jenkins
-kubectl apply -f ./kubernetes-jenkins/serviceAccount.yaml
+kubectl apply -f ./kube-infra/kubernetes-jenkins/serviceAccount.yaml
 
 # create persistent volume
-kubectl create -f ./kubernetes-jenkins/volume.yaml
+kubectl create -f ./kube-infra/kubernetes-jenkins/volume.yaml
 
 # create deployment
-kubectl apply -f ./kubernetes-jenkins/deployment.yaml
+kubectl apply -f ./kube-infra/kubernetes-jenkins/deployment.yaml
 
 # create service for networking
-kubectl apply -f ./kubernetes-jenkins/service.yaml
+kubectl apply -f ./kube-infra/kubernetes-jenkins/service.yaml
 
 # create ingress to communicate with service
-kubectl apply -f ./kubernetes-jenkins/ingress.yaml
+kubectl apply -f ./kube-infra/kubernetes-jenkins/ingress.yaml
 
 set +x
